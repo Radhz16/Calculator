@@ -1,0 +1,71 @@
+import java.util.*;
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Welcome to Java Calculator!");
+        System.out.println("Shall i proceed?");
+        String answer = sc.nextLine();
+        if (answer.equals("Yes")){
+            System.out.println("1.Addition");
+            System.out.println("2.Subtraction");
+            System.out.println("3.Multiplication");
+            System.out.println("4.Division");
+            System.out.println("Choose your input!");
+            int input=sc.nextInt();
+            switch (input) {
+                case 1: 
+                        System.out.println("Enter number a:");
+                        int a1= sc.nextInt();
+                        System.out.println("Enter number b:");
+                        int a2=sc.nextInt();
+                        System.out.println(add(a1, a2));
+                    break;
+                case 2: 
+                System.out.println("Enter number a:");
+                int a3= sc.nextInt();
+                System.out.println("Enter number b:");
+                int a4=sc.nextInt();
+                System.out.println(sub(a3, a4));
+                break;
+                case 3 : 
+                System.out.println("Enter number a:");
+                int a5= sc.nextInt();
+                System.out.println("Enter number b:");
+                int a6=sc.nextInt();
+                System.out.println(mul(a5, a6));
+                break;
+                case 4:
+                System.out.println("Enter number a:");
+                int a7= sc.nextInt();
+                System.out.println("Enter number b:");
+                int a8=sc.nextInt();
+                System.out.println(div(a7, a8));
+                break;
+            
+                default:
+                    System.out.println("Wrong input!");
+                    break;
+            }
+        }else {
+            System.out.println("Okay come backk soon");
+        }
+        
+
+        
+        
+    }
+    public static int add(int a, int b){
+        return a+b;
+    }
+
+    public static int sub(int a , int b){
+        return a-b;
+    }
+    public static int mul(int a,int b){
+        return a*b;
+    }
+    public static int div(int a,int b){
+        return a/b;
+    }
+    
+}
